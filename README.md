@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 🎬 Movie Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Movie Explorer** is a stylish and responsive movie browsing application built with React and Material UI. It leverages the [TMDb API](https://www.themoviedb.org/documentation/api) to provide users with access to popular and trending movies, advanced search capabilities, and personalized features like favorites.
 
-## Available Scripts
+![Movie Explorer Banner](./src/assets/movie-explorer-logo.png)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🧰 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ⚛️ React.js
+- 🎨 Material UI (MUI)
+- 🗃️ Context API
+- 🔐 LocalStorage (for login state)
+- 🌐 TMDb API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📸 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🔎 Instant Search with Live Suggestions
+- 🧠 Smart Filtering (Genre, Year, Rating)
+- ⭐ Favorite Movies List (stored in local storage)
+- 🎥 Movie Details View with YouTube Trailer
+- 📱 Responsive Layout (desktop, tablet, mobile)
+- 🔐 Login & Register UI with Session Control
+- 🌗 Dark/Light Mode Toggle
+- 🔐 Protected Routes for Authenticated Users
+- 📦 Persistent Auth State with LocalStorage
+- ⬆️ Scroll to Top on Route Change
+- 🍔 Mobile Drawer Navigation
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧪 Pages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Route          | Description                      |
+|----------------|----------------------------------|
+| `/login`       | Login screen                     |
+| `/register`    | Register screen                  |
+| `/`            | Home (popular movies + filters)  |
+| `/trending`    | Weekly trending movies           |
+| `/favorites`   | User's favorite movie list       |
+| `/movie/:id`   | Movie detail with trailer, cast  |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🧾 Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Command           | Description                     |
+|------------------|---------------------------------|
+| `npm start`      | Run development server          |
+| `npm run build`  | Build production-ready app      |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔐 Auth Mechanism
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Login sets `localStorage.setItem('loggedIn', 'true')`
+- Logout clears `localStorage`
+- Protected routes via `<PrivateRoute>` component
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📂 Folder Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+src/
+│
+├── api/                  # Axios config for TMDb
+├── assets/               # Images and logos
+├── components/           # Reusable UI (Navbar, Footer, etc.)
+├── context/              # Favorites context
+├── pages/                # Main route pages (Home, Login, etc.)
+├── App.js                # Main app logic
+├── index.js              # Entry point
+└── theme.js              # MUI theme config
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🙌 Acknowledgements
 
-### Analyzing the Bundle Size
+- [TMDb API](https://www.themoviedb.org/)
+- [Material UI](https://mui.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📧 Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Designed and developed by **Pansilu Perera**
